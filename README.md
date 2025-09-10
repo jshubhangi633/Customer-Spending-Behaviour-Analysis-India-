@@ -28,6 +28,14 @@ JOIN amt_sum a ON 1=1
 ORDER BY c.total_spend DESC
 LIMIT 5;
 ```
+### Result - city	            total_spend ,       	per_contribution
+### Greater Mumbai, India	        576718921.00,	    14.15
+### Bengaluru, India	            572326739.00,	      14.05
+### Ahmedabad, India	567794310.00,	13.93
+### Delhi, India	556929212.00,	13.67
+### Kolkata, India	115466943.00,	2.83
+
+
 ## 2- Highest spend month for each card type
 
 ```sql
@@ -47,7 +55,11 @@ FROM (
 ) a
 WHERE rn = 1;
 ```
-
+### Result- mnt	, sales
+### Gold	,	984539536.00
+### Platinum,		1007606464.00
+### Signature	,	1013041105.00
+### Silver, 	1069613713.00
 ## 3- Transaction details when cumulative spend ≥ 1,000,000
 ```sql
 WITH cte AS (
@@ -65,6 +77,11 @@ FROM (
 WHERE rn = 1;
 ```
 
+## Result
+### 13431	Delhi, India	1-Apr-14	Gold	Grocery	M	23697.00	1000956.00	1
+### 18394	Surandai, India	1-Apr-14	Platinum	Entertainment	F	290618.00	1060394.00	1
+
+
 ## 4- Female spend contribution by expense type
 ```sql
 SELECT exp_type,
@@ -73,6 +90,13 @@ FROM credit_card_transactions
 GROUP BY exp_type
 ORDER BY per_female_contribution DESC;
 ```
+### Result- exp_type	per_female_contribution
+### Bills	0.639446
+### Food	0.549053
+### Travel	0.511329
+### Grocery	0.509110
+### Fuel	0.497104
+### Entertainment	0.493729
 
 ## 5-Weekend city with highest spend/transaction ratio
 ```sql
@@ -84,5 +108,6 @@ GROUP BY city
 ORDER BY ratio DESC
 LIMIT 1;
 ```
-
+## Result 
+### Chennai reached 500 transactions the fastest after first txn.
 
