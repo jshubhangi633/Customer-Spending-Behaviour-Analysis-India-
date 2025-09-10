@@ -109,5 +109,6 @@ ORDER BY ratio DESC
 LIMIT 1;
 ```
 ## Result 
-### Chennai reached 500 transactions the fastest after first txn.
+### Delhi has the highest weekend spend efficiency.
+
 
