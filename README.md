@@ -1,13 +1,13 @@
 # Customer-Spending-Behaviour-Analysis-India-
 This SQL project analyzes credit card transactions across various cities and card types in India. The analysis focuses on user spending patterns, trends across expense types, and interesting business questions.
 
-# Key Business Questions Solved
+## Key Business Questions Solved
 # 
-## 1	Top 5 cities with highest spends and % contribution
-## 2	Highest spend month for each card type
-## 3	Transaction when each card reached ₹1M cumulative
-## 4	Female spend contribution by expense type
-## 5	Weekend city with highest spend/transaction ratio
+### 1	Top 5 cities with highest spends and % contribution
+### 2	Highest spend month for each card type
+### 3	Transaction when each card reached ₹1M cumulative
+### 4	Female spend contribution by expense type
+### 5	Weekend city with highest spend/transaction ratio
 
 ## 1-  Top 5 cities with highest spends and % contribution
 ```sql 
